@@ -18,7 +18,6 @@
 <body>
 
 <h1>🔮 NFCおみくじ</h1>
-<button onclick="draw()">おみくじを引く</button>
 <div class="result" id="result"></div>
 
 <script>
@@ -33,8 +32,10 @@ const fortunes = [
 function draw() {
   const f = fortunes[Math.floor(Math.random() * fortunes.length)];
   document.getElementById("result").innerHTML =
-    `<strong>${f.name}</strong><br>${f.msg}`;
+    `<div style="font-size:2rem">${f.name}</div><p>${f.msg}</p>`;
 }
+
+  window.onload = draw;
 </script>
 
 </body>
